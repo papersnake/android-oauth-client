@@ -19,7 +19,7 @@ public class stmallConstants {
 
     public static final String REDIRECT_URL = "http://localhost/Callback";
 
-    private FoursquareConstants() {
+    private stmallConstants() {
     }
 
 }
