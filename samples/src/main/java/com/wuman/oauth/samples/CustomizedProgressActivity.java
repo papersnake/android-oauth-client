@@ -38,7 +38,8 @@ import com.wuman.android.auth.DialogFragmentController;
 import com.wuman.android.auth.OAuthManager;
 import com.wuman.android.auth.oauth2.store.SharedPreferencesCredentialStore;
 import com.wuman.oauth.samples.AsyncResourceLoader.Result;
-import com.wuman.oauth.samples.foursquare.FoursquareConstants;
+//import com.wuman.oauth.samples.foursquare.stmallConstants;
+import com.wuman.oauth.samples.stmall.stmallConstants;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -154,10 +155,10 @@ public class CustomizedProgressActivity extends FragmentActivity {
                     BearerToken.authorizationHeaderAccessMethod(),
                     OAuth.HTTP_TRANSPORT,
                     OAuth.JSON_FACTORY,
-                    new GenericUrl(FoursquareConstants.TOKEN_SERVER_URL),
-                    new ClientParametersAuthentication(FoursquareConstants.CLIENT_ID, null),
-                    FoursquareConstants.CLIENT_ID,
-                    FoursquareConstants.AUTHORIZATION_IMPLICIT_SERVER_URL)
+                    new GenericUrl(stmallConstants.TOKEN_SERVER_URL),
+                    new ClientParametersAuthentication(stmallConstants.CLIENT_ID, null),
+                    stmallConstants.CLIENT_ID,
+                    stmallConstants.AUTHORIZATION_CODE_SERVER_URL)
                     .setScopes(Lists.<String> newArrayList())
                     .setCredentialStore(credentialStore)
                     .build();
@@ -331,7 +332,7 @@ public class CustomizedProgressActivity extends FragmentActivity {
 
         @Override
         public String getRedirectUri() throws IOException {
-            return FoursquareConstants.REDIRECT_URL;
+            return stmallConstants.REDIRECT_URL;
         }
 
         @Override
